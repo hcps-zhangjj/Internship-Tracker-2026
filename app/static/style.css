@@ -17,14 +17,14 @@ section {
     margin-block: 5px;
 }
 
-prelog-header {
+#navbar {
     display: flex;
     justify-content: space-between;
     padding: 1em;
     border-bottom: 2px #ececec solid;
 }
 
-prelog-header img {
+#navbar img {
     width: 100px;
 }
 
