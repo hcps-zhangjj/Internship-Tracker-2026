@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="icon" type="image/x-icon" href="../assets/small-logo.svg">
+</head>
+<body>
+
+    <div class="wrapper" id="navbar">
+        <img src="../assets/large-logo.svg" alt="">
+
+        <nav class="primary-navigation">
+            <ul>  
+                <li><a href="start.html">Getting Started</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+
+    <div class="content">
+        {% block content %} {% endblock %}
+    </div>
+</body>
+</html>
