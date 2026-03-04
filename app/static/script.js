@@ -19,13 +19,13 @@
 // customElements.define('prelog-header', PreLogHeader)
 
 
-function toggleAdminCode() {
+function toggleAccessCode() {
     const role = document.getElementById("role").value;
-    const adminGroup = document.getElementById("admin-code-group");
+    const accessGroup = document.getElementById("access-code-group");
 
-    if (role === "admin") {
-        adminGroup.style.display = "block";
+    if (role === "admin" || role === "mentor" || role === "teacher") {
+        accessGroup.style.display = "block";
     } else {
-        adminGroup.style.display = "none";
+        accessGroup.style.display = "none";
     }
 }
