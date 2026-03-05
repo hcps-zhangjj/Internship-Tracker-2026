@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 * {
-    font-family: Inter Tight;
+    font-family: 'Inter Tight', sans-serif;
+    box-sizing: border-box;
 }
 
 *:focus {
@@ -11,6 +12,7 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: #ffffff;
 }
 
 li {
@@ -39,10 +41,10 @@ section {
 
 .primary-navigation ul {
     list-style: none;
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
     display: flex;
-    gap: 40px;
+    gap: 20px;
     padding-right: 20px;
 }
 
@@ -50,9 +52,26 @@ section {
     color: black;
     background-color: #ececec;
     border-radius: 10px;
-    padding: 0.5em;
+    padding: 0.5em 1em;
     font-weight: bold;
     text-decoration: none;
+}
+
+.primary-navigation a:hover {
+    background-color: #d8d8d8;
+}
+
+.msgs {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.warning {
+    background-color: #ececec;
+    border-radius: 10px;
+    padding: 0.6em 1.2em;
+    font-weight: 600;
 }
 
 .container {
@@ -61,6 +80,22 @@ section {
     justify-content: center;
 }
 
+.feedback_card {
+    margin-top: 50px;
+    width: 500px;
+    background-color: #ececec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 25px;
+    padding: 30px;
+    margin-bottom: 50px;
+}
+
+.card h1 {
+    margin-top: 0;
+}
 
 .login_card {
     margin-top: 50px;
@@ -77,7 +112,11 @@ section {
 
 
 .form-group {
-    margin: 20px;
+    width: 100%;
+    margin: 12px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
 }
 
 label, input, .btn{
@@ -94,11 +133,46 @@ input {
     font-size: 1em;
 }
 
+/* This is part of sritha's code I'm unsure about incuding
+
+input[type="text"],
+input[type="password"],
+select, 
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+select:focus,*/
+
+textarea {
+    width: 100%;
+    padding: 0.6em 0.8em;
+    border: 2px solid #d0d0d0;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    background-color: #ffffff;
+    transition: border-color 0.2s;
+    min-height: 100px;
+}
+
+textarea:focus {
+    border-color: #aaaaaa;
+}
+
+input[type="range"] {
+    width: 100%;
+    accent-color: #333333;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
 select {
     font-size: 1.15em;
 }
 
-
+button,
 .btn {
     margin-left: 45%;
     border-radius: 15px;
@@ -107,6 +181,185 @@ select {
     padding: 8px;
 }
 
+/* .btn {
+    background-color: #333333;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 0.6em 1.4em;
+    font-weight: bold;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+} */
+
+button:hover,
 .btn:hover {
     cursor: pointer;
+    background-color: #555555;
+}
+
+button.danger {
+    background-color: #cc3333;
+}
+
+button.danger:hover {
+    background-color: #aa2222;
+}
+
+a.cancel-link {
+    margin-left: 10px;
+    color: #666;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a.cancel-link:hover {
+    color: #333;
+}
+
+/* Table */
+.tableBox {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    width: 100%;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+th {
+    background-color: #333333;
+    color: white;
+    padding: 12px 16px;
+    text-align: left;
+}
+
+td {
+    background-color: #ececec;
+    padding: 10px 16px;
+    border-bottom: 2px solid #ffffff;
+}
+
+td form {
+    display: inline;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* Rating badge in table */
+.rating-badge {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 2px;
+    background-color: #333;
+    color: white;
+    border-radius: 8px;
+    padding: 4px 10px;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.rating-badge span {
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: #aaa;
+}
+
+/* Action buttons */
+.action-btns {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.btn-edit {
+    background-color: #333;
+    color: white;
+    border-radius: 8px;
+    padding: 6px 14px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.btn-edit:hover {
+    background-color: #555;
+}
+
+.btn-delete {
+    background-color: transparent;
+    color: #cc3333;
+    border: 2px solid #cc3333;
+    border-radius: 8px;
+    padding: 4px 12px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-delete:hover {
+    background-color: #cc3333;
+    color: white;
+}
+
+/* Submit button */
+.btn-submit {
+    width: 100%;
+    padding: 0.75em;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-submit:hover {
+    background-color: #555;
+}
+
+/* Range labels */
+.range-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 4px;
+}
+
+/* Live rating number */
+.rating-live {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* Button row with cancel */
+.btn-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Empty state */
+.empty-state {
+    text-align: center;
+    padding: 40px;
+    color: #888;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
 }
